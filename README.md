@@ -1,0 +1,2 @@
+# CompaniesMap
+A TypeScript app.
