@@ -1,10 +1,4 @@
-// Instructions to every other class on how they can be an argument to 'addMarker'
-interface Mappable {
-	location: {
-		lat: number;
-		lng: number;
-	};
-}
+import { Mappable } from './Mappable';
 
 export class CustomMap {
 	private googleMap: google.maps.Map;
@@ -32,7 +26,7 @@ export class CustomMap {
 		});
 
 		const infoWindow = new google.maps.InfoWindow({
-			content: 'Hello!'
+			content: mappable.markerContent()
 		});
 
 		marker.addListener('click', () => {
